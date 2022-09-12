@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
-import headerImg from "../assets/img/header-img.svg";
+import headerImg from "../assets/img/DS_2.svg";
 
 export const Banner = () => { 
     const [loopNum, setLoopNum] = useState(0);
@@ -45,16 +45,13 @@ export const Banner = () => {
         <section className="banner" id="home">
             <Container>
                 <Row className='aling-item-center'>
-                    <Col xs={12} md={6} xl={7}>
+                    <Col >
                         <span className="tagline">Bienvenido a Dark Solution</span>
-                        <h1>{`Te Ayudamos en `}<span className="wrap">{text}</span></h1>
-                        <p>Hi, I'm webdecoded, a web developer from Colombia. I have a passion for creating websites and web applications.</p>
-                        <button onClick={() => console.log('connetc')}>Let's connect<ArrowRightCircle size={25}/></button>
+                        <img src={headerImg} alt="Headder Img"  /><br/>
+                        <button onClick={() => console.log('connetc')} >Let's connect<ArrowRightCircle size={25}/></button>
                     </Col>
 
-                    <Col xs={12} md={6} xl={5}>
-                        <img src={headerImg} alt="Headder Img" />
-                    </Col>
+                
                 </Row>
             </Container>
         </section>  
