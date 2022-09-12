@@ -49,11 +49,11 @@ export const NavBar = () => {
                 </Nav>
 
                 <span className="navbar-text"> 
-                    <div className="social-icon"> 
+                    {/* <div className="social-icon"> 
                         <a href="#"> <img src={navIcon1} alt=""/></a> 
                         <a href="#"> <img src={navIcon2} alt=""/></a> 
                         <a href="#"> <img src={navIcon3} alt=""/></a> 
-                    </div>
+                    </div> */}
 
                     <button className="vvd" onClick={() => console.log('conect')}><span>Let's Connect</span></button>
                 </span>
