@@ -2,9 +2,8 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import { Navbar, Container, Nav } from "react-bootstrap";
 import logo from "../assets/img/LogoDS.svg";
-import navIcon1 from "../assets/img/nav-icon1.svg";
-import navIcon2 from "../assets/img/nav-icon2.svg";
-import navIcon3 from "../assets/img/nav-icon3.svg";
+import TheApi from './https';
+
 
 export const NavBar = () => {	
     const [activeLink, setActiveLink] = useState("home");
@@ -57,7 +56,7 @@ export const NavBar = () => {
 
                     <button className="vvd" onClick={() => console.log('conect')}><span>Let's Connect</span></button>
                 </span>
-
+                <TheApi/>
 
                 </Navbar.Collapse>
             </Container>
