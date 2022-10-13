@@ -1,16 +1,19 @@
 import React from 'react';
 import './App.css';
-import { NavBar } from './components/NavBar';
-import { Banner } from './components/Banner';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import TheApi from './components/https';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
+import MainPage from './Views/mainpage';
+import LetsConnect from './Views/letsConnect';
 
-function App() {
+const App = () => {
   return (
     <div className="App"> 
-      <NavBar />
-      <Banner />
-      <TheApi />
+      <Router>
+        <Routes>
+          <Route path='/' element={<MainPage/>}/>
+          <Route path='letsConnect' element={<LetsConnect/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }

@@ -4,7 +4,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
 import headerImg from "../assets/img/LogoDS.svg";
 
-export const Banner = () => { 
+const Banner = () => { 
     const [loopNum, setLoopNum] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
     const toRotate = ["Solucionar Tu Necesidad", "Resolver Tu Problema", "UI/UX Designer"];
@@ -48,7 +48,7 @@ export const Banner = () => {
                     <Col >
                         <span className="tagline">Bienvenido a Dark Solution</span>
                         <img src={headerImg} alt="Headder Img"  /><br/>
-                        <button onClick={() => console.log('connetc')} >Let's connect<ArrowRightCircle size={25}/></button>
+                        <button onClick={() => console.log('connet')} >Let's connect<ArrowRightCircle href={'/letsConnect'} size={25}/></button>
                     </Col>
 
                 
@@ -57,3 +57,5 @@ export const Banner = () => {
         </section>  
     )
 }
+
+export default Banner
