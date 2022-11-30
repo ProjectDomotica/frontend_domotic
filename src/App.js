@@ -1,21 +1,41 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react'
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"; 
-import MainPage from './Views/mainpage';
-import LetsConnect from './Views/letsConnect';
+import { Metrics } from './Assets/data';
+import MainPage from './views';
 
-const App = () => {
+/*
+export const getdata = () => {
+  fetch('http://localhost:4000/api/home', {
+  credentials: 'omit'
+})
+  .then((response) => response.json())
+  .then(data => console.log(data))
+  .catch((error) => {
+    console.error('There has been a problem with your fetch operation:', error);
+  })
+}
+
+getdata()
+*/
+  
+function App() {  
   return (
-    <div className="App"> 
-      <Router>
-        <Routes>
-          <Route path='/' element={<MainPage/>}/>
-          <Route path='letsConnect' element={<LetsConnect/>}/>
-        </Routes>
-      </Router>
-    </div>
+    <>
+      
+      <MainPage/>
+    </>
   );
 }
 
+
+
+/*
+Datos a tomar: 
+Temperatura
+Humedad
+Dioxido de carbono
+Hora
+Luz
+Puerta
+*/
 export default App;
